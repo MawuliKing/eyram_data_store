@@ -3,18 +3,71 @@
 .env.local
 .env.*.local
 
+# Configuration files (may contain sensitive data)
+config.php
+_partials/config.php
+
+# Database files (may contain sensitive data)
+database file/
+*.sql
+*.sql.gz
+*.sqlite
+*.sqlite3
+*.db
+
+# User uploads (should not be in version control)
+uploads/
+uploads/**
+
+# Third-party libraries (should be managed via Composer)
+admin/_partials/PhpSpreadsheet/
+admin/_partials/tcpdf/
+
 # Composer
 /vendor/
 composer.lock
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+*.bak
+*.backup
+*~
+
+# Duplicate/backup files
+*\(1\).php
+*\(2\).php
+*\(3\).php
 
 # IDE
 .idea/
 .vscode/
 *.swp
 *.swo
-*~
 
 # OS
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+Desktop.ini
 
+# PHP
+*.php~
+.phpunit.result.cache
+
+# Session files
+sessions/
+
+# Error logs
+error_log
+php_errors.log
