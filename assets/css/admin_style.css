@@ -1,0 +1,163 @@
+/* --- Final Admin Styles --- */
+:root {
+    --mtn-blue: #024781;
+    --mtn-yellow: #ffcb05;
+    --light-gray: #f8f9fa;
+    --sidebar-width: 280px;
+}
+
+body {
+    background-color: var(--light-gray);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main Layout Structure */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.admin-content {
+    flex-grow: 1;
+    width: 100%;
+}
+
+/* Desktop Sidebar Styles */
+.admin-sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--mtn-blue);
+    color: white;
+    flex-shrink: 0;
+}
+
+.admin-sidebar .sidebar-heading {
+    padding: 1rem 1.25rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-sidebar .list-group-item {
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 1rem 1.5rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.admin-sidebar .list-group-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.admin-sidebar .list-group-item.active {
+    background-color: var(--mtn-yellow);
+    color: var(--mtn-blue);
+    font-weight: bold;
+}
+
+.admin-sidebar .list-group-item i {
+    margin-right: 12px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Mobile-Only Styles */
+@media (max-width: 991.98px) {
+    .admin-sidebar {
+        display: none; /* Hide desktop sidebar on mobile */
+    }
+}
+
+/* Stat Cards on Dashboard */
+.stat-card {
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+/* ======================================= */
+/* === MOBILE MENU REFINEMENT          === */
+/* ======================================= */
+
+/* This targets the links ONLY inside the mobile offcanvas menu */
+.offcanvas .list-group-item {
+    color: white !important;
+    background-color: transparent;
+    border: none !important; 
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+/* 
+    ========================================================
+    THIS IS THE NEW RULE TO ADD FOR SPACING THE ICONS
+    ========================================================
+*/
+.offcanvas .list-group-item i {
+    margin-right: 12px !important; /* Adds space to the right of the icon */
+    width: 20px; /* Optional: ensures all icons take up the same space */
+}
+/* ======================================================== */
+
+
+/* This styles the active link in the mobile menu */
+.offcanvas .list-group-item.active {
+    background-color: var(--mtn-yellow) !important;
+    color: var(--mtn-blue) !important;
+}
+
+/* This styles the hover effect for other links */
+.offcanvas .list-group-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+}
+/* ======================================= */
+/* === MOBILE MENU TEXT COLOR FIX      === */
+/* ======================================= */
+
+/* This targets the links ONLY inside the mobile offcanvas menu */
+.offcanvas .list-group-item {
+    color: white !important; /* Forces the text color to be white */
+    background-color: transparent; /* Ensures there's no white background on the item */
+}
+
+/* This styles the active link in the mobile menu */
+.offcanvas .list-group-item.active {
+    background-color: var(--mtn-yellow) !important; /* Yellow background */
+    color: var(--mtn-blue) !important; /* Blue text */
+}
+.stat-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--mtn-yellow) !important;
+    color: var(--mtn-blue);
+    font-size: 1.8rem;
+}
+/* ======================================= */
+/* === AGENT PORTAL STYLES             === */
+/* ======================================= */
+
+.agent-portal-content {
+    background-color: #ecf0f1; /* A very light, soft grey-blue */
+}
+
+.agent-service-card {
+    background-color: white;
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.agent-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}

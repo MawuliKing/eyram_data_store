@@ -1,0 +1,38 @@
+/* --- BRUTE FORCE METHOD CSS --- */
+
+/* This is a wrapper for our entire admin layout */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* This is our sidebar. It is NOT an offcanvas by default. */
+.admin-sidebar {
+    width: 280px;
+    background-color: #024781; /* MTN Blue */
+    color: white;
+    flex-shrink: 0; /* Prevents the sidebar from shrinking */
+}
+
+/* This is the main content area */
+.admin-content {
+    flex-grow: 1; /* Allows the content to grow and fill remaining space */
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+
+/* --- MOBILE-ONLY STYLES --- */
+/* This block ONLY applies to screens smaller than 992px */
+@media (max-width: 991.98px) {
+    /* On mobile, we HIDE the main desktop sidebar */
+    .admin-sidebar {
+        display: none;
+    }
+
+    /* We DON'T push the content over on mobile */
+    .admin-content {
+        padding: 10px;
+        margin-left: 0;
+    }
+}
